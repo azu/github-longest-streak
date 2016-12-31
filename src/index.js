@@ -11,7 +11,7 @@ function fetchAndResult(user) {
         <p>Longest Streak: ${contributes["longestStreak"]}</p>
         <p>Current Streak: ${contributes["currentStreak"]}</p>
 <p>
-<code>${location.origin}${location.pathname}?user=${user}</code>
+<textarea>${location.origin}${location.pathname}?user=${user}</textarea>
 </p>
 `;
     }).catch(error => {
