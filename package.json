@@ -24,7 +24,8 @@
     "watch:js": "NODE_ENV=development webpack -d --watch",
     "watch:css": "chokidar --initial 'src/**/*.css' -c 'postcss --config postcss.config.js'",
     "watch": "npm-run-all clean --parallel watch:*",
-    "clean": "rimraf public/build && mkdirp public/build"
+    "clean": "rimraf public/build && mkdirp public/build",
+    "deploy": "npm run build && git subtree push --prefix public/ origin gh-pages"
   },
   "keywords": [
     "github",
@@ -64,6 +65,10 @@
     "webpack-dev-server": "beta"
   },
   "dependencies": {
+    "github-calendar-parser": "^1.1.5",
+    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-parse": "0.0.3",
+    "moment": "^2.17.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }

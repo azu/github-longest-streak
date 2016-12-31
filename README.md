@@ -1,16 +1,15 @@
 # github-longest-streak
 
-Online Viewer for GitHub longest longest_streak
+Online Viewer for GitHub Full Longest Streak.
 
-## Install
 
-Install with [npm](https://www.npmjs.com/):
-
-    npm install github-longest-streak
 
 ## Usage
 
-- [ ] Write usage instructions
+Local:
+
+    npm install
+    npm start
 
 ## Changelog
 

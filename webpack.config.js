@@ -15,6 +15,10 @@ module.exports = {
         exprContextCritical: false,
         loaders: [
             {
+                test: /cheerio\/package$/,
+                loader: 'json-loader'
+            },
+            {
                 test: /\.json$/,
                 loader: "json-loader"
             },

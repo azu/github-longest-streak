@@ -55,17 +55,14 @@ function createYearRange(startDate, endDate = new Date()) {
     }
     return years;
 }
-module.export = function(user) {
-    getCreatedDateOfGitHubUser(user).then(createDate => {
+module.exports = function(user) {
+    return getCreatedDateOfGitHubUser(user).then(createDate => {
         const nextYear = new Date();
         nextYear.setFullYear(nextYear.getFullYear() + 1);
         const years = createYearRange(createDate, nextYear);
         console.log(years);
         return getContributes(user, years).then(svg => {
             return parse(svg);
-        }).then(contributes => {
-            console.log("currentStreak", contributes["currentStreak"]);
-            console.log("longestStreak", contributes["longestStreak"]);
         });
     })
 };
