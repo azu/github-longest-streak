@@ -11,6 +11,12 @@ Local:
     npm install
     npm start
 
+## Development
+
+Deploy via Travis CI.
+
+- [./.travis.yml](travis.yml)
+
 ## Changelog
 
 See [Releases page](https://github.com/azu/github-longest-streak/releases).
