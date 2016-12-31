@@ -2,7 +2,7 @@
 
 Online Viewer for GitHub Full Longest Streak.
 
-See 
+See https://azu.github.io/github-longest-streak/
 
 ## Usage
 
