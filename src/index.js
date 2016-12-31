@@ -1,22 +1,35 @@
 // MIT © 2016 azu
 "use strict";
+const url = require("url");
 const fetchContributes = require("./fetch-contributes");
-const onClick = (event) => {
+function fetchAndResult(user) {
     const output = document.getElementById("js-output");
-    const user = document.getElementById("js-userName").value.replace("@", "");
-    if (!user) {
-        return;
-    }
     output.innerHTML = "Fetching...";
-    fetchContributes(user).then(contributes => {
+    return fetchContributes(user).then(contributes => {
         console.log("Contributes", contributes);
         output.innerHTML = `
         <p>Longest Streak: ${contributes["longestStreak"]}</p>
         <p>Current Streak: ${contributes["currentStreak"]}</p>
+<p>
+<code>${location.origin}${location.pathname}?user=${user}</code>
+</p>
 `;
     }).catch(error => {
         console.log(error);
         output.textContent = error.message;
     });
+}
+const onClick = (event) => {
+    const user = document.getElementById("js-userName").value.replace("@", "");
+    if (!user) {
+        return;
+    }
+    fetchAndResult(user);
 };
 document.getElementById("js-submit").addEventListener("click", onClick);
+window.addEventListener("load", () => {
+    const query = url.parse(window.location.href, true).query;
+    if (query.user) {
+        fetchAndResult(query.user);
+    }
+});
