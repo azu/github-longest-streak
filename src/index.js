@@ -14,6 +14,9 @@ const onClick = (event) => {
         <p>Longest Streak: ${contributes["longestStreak"]}</p>
         <p>Current Streak: ${contributes["currentStreak"]}</p>
 `;
+    }).catch(error => {
+        console.log(error);
+        output.textContent = error.message;
     });
 };
 document.getElementById("js-submit").addEventListener("click", onClick);
