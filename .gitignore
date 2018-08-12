@@ -84,3 +84,5 @@ crashlytics-build.properties
 
 /lib
 public/build
+/.cache/
+/dist/

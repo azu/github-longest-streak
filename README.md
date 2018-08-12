@@ -8,14 +8,9 @@ See https://azu.github.io/github-longest-streak/
 
 Local:
 
-    npm install
-    npm start
+    yarn install
+    yarn start
 
-## Development
-
-Deploy via Travis CI.
-
-- [./.travis.yml](travis.yml)
 
 ## Changelog
 

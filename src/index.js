@@ -6,7 +6,6 @@ function fetchAndResult(user) {
     const output = document.getElementById("js-output");
     output.innerHTML = "Fetching...";
     return fetchContributes(user).then(contributes => {
-        console.log("Contributes", contributes);
         output.innerHTML = `
         <p>Longest Streak: ${contributes["longestStreak"]}</p>
         <p>Current Streak: ${contributes["currentStreak"]}</p>
@@ -15,7 +14,7 @@ function fetchAndResult(user) {
 </p>
 `;
     }).catch(error => {
-        console.log(error);
+        console.error(error);
         output.textContent = error.message;
     });
 }
