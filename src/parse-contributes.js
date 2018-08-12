@@ -33,6 +33,15 @@ export function parseGitHubContributions(contributions) {
         });
         return longestGroup;
     };
+    const getCurrentGroup = (today, groups) => {
+        const todayMoment = moment(today);
+        return groups.find(group => {
+            return group.some(contribute => {
+                return todayMoment.isSame(moment(contribute.date, "YYYY-MM-DD"), "day");
+            });
+        });
+    };
+
     const getStreakFromGroup = (group) => {
         if (group.length === 0) {
             return {
@@ -61,7 +70,8 @@ export function parseGitHubContributions(contributions) {
     };
     const groups = groupByCount(contributions);
     const longestGroup = getLongestGroup(groups);
-    const currentGroup = groups[groups.length - 1];
+    const currentGroup = getCurrentGroup(new Date(), groups);
+    console.log("currentGroup", currentGroup);
     const longestStreak = getDiffDay(getStreakFromGroup(longestGroup));
     const currentStreak = getDiffDay(getStreakFromGroup(currentGroup));
     return {
