@@ -7,6 +7,7 @@ function fetchAndResult(user) {
     output.innerHTML = "Fetching...";
     return fetchContributes(user).then(contributes => {
         output.innerHTML = `
+        <p>@${encodeURIComponent(user)}'s contributions</p>
         <p>Longest Streak: ${contributes["longestStreak"]}</p>
         <p>Current Streak: ${contributes["currentStreak"]}</p>
 <p>
