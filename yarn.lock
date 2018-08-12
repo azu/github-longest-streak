@@ -6,6 +6,10 @@
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@alrra/travis-scripts/-/travis-scripts-3.0.1.tgz#45d5b9357317b6cc5553dfd99931843ae0b0e53a"
 
+"@azu/travis-scripts@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@azu/travis-scripts/-/travis-scripts-3.0.3.tgz#789bbf1013a89f1b5cff6d9d0727d74d803cd889"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
