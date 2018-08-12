@@ -16,8 +16,8 @@
   "scripts": {
     "start": "npm-run-all clean --parallel server",
     "server": "parcel public/index.html",
-    "build": "parcel build public/index.html",
-    "clean": "rimraf public/build && mkdirp public/build",
+    "build": "parcel build public/index.html --public-url .",
+    "clean": "rimraf dist",
     "test": "# NO TEST"
   },
   "keywords": [
