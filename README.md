@@ -2,7 +2,19 @@
 
 Online Viewer for GitHub Full Longest Streak.
 
-See https://azu.github.io/github-longest-streak/
+See <https://azu.github.io/github-longest-streak/>
+
+## What is Longest Streak? 
+
+It is old feature of GitHub.
+
+- [Why was the Contribution Streak (days-in-a-row) Removed...?! · Issue #163 · dear-github/dear-github](https://github.com/dear-github/dear-github/issues/163)
+
+## Technically Details
+
+Use following API:
+
+- [sallar/github-contributions-api: Github contributions API (bootleg)](https://github.com/sallar/github-contributions-api)
 
 ## Usage
 
