@@ -43,7 +43,7 @@ export function parseGitHubContributions(contributions) {
     };
 
     const getStreakFromGroup = (group) => {
-        if (group.length === 0) {
+        if (!group || group.length === 0) {
             return {
                 from: null,
                 to: null
